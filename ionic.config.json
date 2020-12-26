@@ -1,0 +1,7 @@
+{
+  "name": "kanda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
