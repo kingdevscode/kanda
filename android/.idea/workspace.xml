@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d2d44eb-55e4-42b1-a3c1-e3b4a5475a07" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/home/home.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/assets/icon/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../src/assets/icon/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mFIDsR6I1WrqJiYZ3hgmo0RWtW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d2d44eb-55e4-42b1-a3c1-e3b4a5475a07" name="Default Changelist" comment="" />
+      <created>1609082799354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609082799354</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="94" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609083946967">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="94" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.770@0.0.1280.770" timestamp="1609083946967" />
+    <state x="420" y="89" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1609083940992">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="420" y="89" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.770@0.0.1280.770" timestamp="1609083940992" />
+    <state x="106" y="81" width="1096" height="586" key="AVDManager" timestamp="1609084332585">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="106" y="81" width="1096" height="586" key="AVDManager/0.0.1280.770@0.0.1280.770" timestamp="1609084332585" />
+    <state x="296" y="167" key="run.anything.popup" timestamp="1609083993381">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="296" y="167" key="run.anything.popup/0.0.1280.770@0.0.1280.770" timestamp="1609083993381" />
+  </component>
+</project>
