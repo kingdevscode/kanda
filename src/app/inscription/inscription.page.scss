@@ -1,0 +1,97 @@
+ion-content{
+    background-color: #ffc409;
+
+  .ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+  }
+  .logo-brand{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    overflow: hidden;
+  
+  
+    header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 40%;
+      border-radius: 0 0 0 45%;
+      background-color: #ffc409;
+  
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .ctn{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 55%;
+      
+      
+  
+      .sign-in-form{
+        background-color: transparent;
+        display: block;
+        width: 100%;
+  
+        div{
+          margin: 10px 20px;
+          padding: 10px 20px;
+        }
+        .form-in{
+          border-radius: 24px;
+          box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+          background-color: #fff;
+  
+          input{
+            outline: none;
+            border: none;
+            width: 100%;
+            background-color: transparent;
+          }
+        }
+  
+        .form-btn{
+          display: flex;
+          justify-content: center;
+  
+          input{
+            padding: 10px 27px;
+            border-radius: 24px;
+            border: none;
+            outline: none;
+            background-color: #222428;
+            color: #fff;
+            box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+          }
+          input:hover{
+            transition: ease .2s;
+            background-color: #141416;
+          }
+        }
+      }
+    }
+
+  @media(max-width: 439px){
+    .ctn{
+      background-image: url(../../assets/sign-background.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: -120px;
+    }
+  }}}

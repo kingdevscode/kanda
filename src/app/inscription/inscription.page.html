@@ -9,17 +9,19 @@
           <input type="email" name="" id="" placeholder="email">
         </div>
         <div class="form-in">
+          <input type="text" name="" id="" placeholder="nom d'utilisateur">
+        </div>
+        <div class="form-in">
           <input type="password" name="" id="" placeholder="mot de passe">
         </div>
         <div class="form-btn">
-          <input type="submit" routerLink="/main" value="se connecter">
-            <a href="http://" style="display: block; text-align: center;"><small>mot de passe oublié?</small></a>
+          <input type="submit" routerLink="/main" value="s'inscrire">
         </div>
-        
       </form>
     </div>
   </div> 
 </ion-content>
 <ion-footer>
-  <p align="center">vous n'avez pas de compte? <a href="http://" routerLink="/inscription">Inscrivez-vous</a></p>
+  <p align="center">Vous avez deja un compte? <ion-back-button defaultHref="/home" text="connectez-vous" icon="" style="display: inline;"></ion-back-button></p>
 </ion-footer>
+

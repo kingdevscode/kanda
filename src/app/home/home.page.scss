@@ -76,6 +76,8 @@ ion-content{
       .form-btn{
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         input{
           padding: 10px 27px;
