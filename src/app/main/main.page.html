@@ -1,22 +1,25 @@
 <ion-header>
   <ion-toolbar>
+    <ion-title>
+      Kanda
+    </ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home" text="" icon="menu-outline"></ion-back-button>
+      <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Kanda</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card>
-      <!-- <ion-card-header>
-        
-          <ion-card-subtitle>Peuple: <i>Nordiste</i> </ion-card-subtitle>
-          <ion-card-title>Festival du Nord</ion-card-title>
-      </ion-card-header> -->
-        
+    <ion-card *ngFor = "let article of data?.articles" >
+      <ion-card-header>
+        <ion-img [src]="article.urlToImage"></ion-img>
+        <a [href]="article.url"> Go to the website <ion-icon name="open-outline"></ion-icon> </a>
+        <ion-card-title>{{ article.title }}</ion-card-title>
+      </ion-card-header>
+
       <ion-card-content>
-        <img src="../../assets/festi1.jpg">
+        {{ article.description }}
       </ion-card-content>
     </ion-card>
 </ion-content>
