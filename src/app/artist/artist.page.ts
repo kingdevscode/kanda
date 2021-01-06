@@ -2,26 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.page.html',
-  styleUrls: ['./main.page.scss'],
+  selector: 'app-artist',
+  templateUrl: './artist.page.html',
+  styleUrls: ['./artist.page.scss'],
 })
-export class MainPage implements OnInit {
-  
-  data : any;
+export class ArtistPage implements OnInit {
+
+  data:any;
   constructor(
     public http: HttpClient
-  ){
+  ) {
     this.getArticle()
-  }
+   }
 
   ngOnInit() {
   }
 
   getArticle(){
-    let url = 'http://newsapi.org/v2/everything?q=cultural%20festival&from=2020-12-06&sortBy=publishedAt&apiKey=48d469635a4d4cf8b7e550d8a7e9b22d';
+    let url = 'http://newsapi.org/v2/everything?q=music&from=2020-12-06&sortBy=publishedAt&apiKey=48d469635a4d4cf8b7e550d8a7e9b22d';
     this.http.get(url).subscribe(data => {
       this.data = data;
     })
   }
+
 }
