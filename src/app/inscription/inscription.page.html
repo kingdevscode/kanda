@@ -1,24 +1,30 @@
-<ion-content [fullscreen]="true">
-  <div class="container">
-    <header>
-      <img src="../../assets/icon/favicon.png">
-    </header>
-    <div class="ctn">
-      <form action="" class="sign-in-form">
-        <div class="form-in">
-          <input type="email" name="" id="" placeholder="email">
-        </div>
-        <div class="form-in">
-          <input type="text" name="" id="" placeholder="nom d'utilisateur">
-        </div>
-        <div class="form-in">
-          <input type="password" name="" id="" placeholder="mot de passe">
-        </div>
-        <div class="form-btn">
-          <input type="submit" routerLink="/welcome" value="s'inscrire">
-        </div>
-      </form>
-    </div>
-  </div> 
-</ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title style="text-align: center;">Register</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="name" placeholder="User name" type="text"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input [(ngModel)]="confirmPassword" (ionChange)="checkPassword()" placeholder="Confirm Password" type="password"></ion-input>
+        <ion-text *ngIf="password && !passwordMatch" color="danger">Password do not match</ion-text>
+        <ion-text *ngIf="password && passwordMatch" color="success">Password match</ion-text>
+      </ion-item>
+
+    </ion-list>
+  </ion-card-content>
+  <ion-button [disable]="!passwordMatch" shape="round" color="primary" (click)="register()">SignUp</ion-button>
+</ion-card>
 
