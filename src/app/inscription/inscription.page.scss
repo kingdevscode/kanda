@@ -1,5 +1,43 @@
 ion-content{
     background-color: #ffc409;
+  
+    header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 40%;
+      border-radius: 0 0 0 45%;
+      background-color: #ffc409;
+  
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .form-btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ion-button{
+        font-weight: bolder;
+      }
+      input{
+        padding: 10px 27px;
+        border-radius: 24px;
+        border: none;
+        outline: none;
+        background-color: #222428;
+        color: #fff;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+      }
+      input:hover{
+        transition: ease .2s;
+        background-color: #141416;
+      }
+    }
 
   .ctn{
     display: flex;
@@ -20,21 +58,6 @@ ion-content{
     height: 95vh;
     overflow: hidden;
   
-  
-    header{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      height: 40%;
-      border-radius: 0 0 0 45%;
-      background-color: #ffc409;
-  
-      img{
-        width: 100px;
-        height: 100px;
-      }
-    }
     .ctn{
       display: flex;
       flex-direction: column;
@@ -66,24 +89,6 @@ ion-content{
           }
         }
   
-        .form-btn{
-          display: flex;
-          justify-content: center;
-  
-          input{
-            padding: 10px 27px;
-            border-radius: 24px;
-            border: none;
-            outline: none;
-            background-color: #222428;
-            color: #fff;
-            box-shadow: 1px 1px 3px rgba(0,0,0,.4);
-          }
-          input:hover{
-            transition: ease .2s;
-            background-color: #141416;
-          }
-        }
       }
     }
 

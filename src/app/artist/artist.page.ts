@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-artist',
@@ -10,7 +11,8 @@ export class ArtistPage implements OnInit {
 
   data:any;
   constructor(
-    public http: HttpClient
+    public http: HttpClient,
+    public menu: MenuController
   ) {
     this.getArticle()
    }
@@ -19,10 +21,14 @@ export class ArtistPage implements OnInit {
   }
 
   getArticle(){
-    let url = 'http://newsapi.org/v2/everything?q=music&from=2020-12-06&sortBy=publishedAt&apiKey=48d469635a4d4cf8b7e550d8a7e9b22d';
+    let url = 'http://newsapi.org/v2/everything?q=artist&from=2020-12-20&sortBy=publishedAt&apiKey=48d469635a4d4cf8b7e550d8a7e9b22d';
     this.http.get(url).subscribe(data => {
       this.data = data;
     })
+  }
+
+  openEnd(){
+    this.menu.close();
   }
 
 }
