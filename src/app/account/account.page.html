@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>account</ion-title>
+    <ion-title>Account</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
+  
 </ion-header>
 
 <ion-content>
+  <ion-button shape="round" color="tertiary" (click)="addPhoto(library)">
+    <ion-icon name="image"></ion-icon>
+    Open gallery
+  </ion-button>
+
+  <ion-button shape="round" color="secondary" (click)="addPhoto(camera)">
+    <ion-icon name="canera"></ion-icon>
+    Open camera
+  </ion-button>
+
+  <div class="flex">
+    <div class="img-box">
+      <img [src]="image">
+    </div>
+  </div>
 
 </ion-content>

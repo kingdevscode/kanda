@@ -1,4 +1,8 @@
 <ion-content>
+
+  <header>
+    <img src="../../assets/favicon.svg" alt="">
+  </header>
   <ion-card>
     <ion-card-header>
       <ion-card-title style="text-align: center;">Login</ion-card-title>
@@ -16,11 +20,13 @@
     </ion-list>
   </ion-card-content>
 
-  <ion-button shape="round" (click)="login()" style="text-align: center;">Login</ion-button>
+  <div class="form-btn">
+    <ion-button shape="round" color="warning" (click)="login()">LOGIN</ion-button>
+  </div>
   </ion-card>
 
   <div style="padding: 20px;text-align: center;">
-    <a (click)="forgot()">Forgot Password</a><br>
+    <a (click)="forgot()">Forgot Password?</a><br>
     <p>You don`t have an Account? <a (click)="register()">Create here</a></p>
   </div>
 </ion-content>

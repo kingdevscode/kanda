@@ -15,14 +15,14 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
-//env
+import { Camera } from '@ionic-native/camera/ngx';
+
 import { environment } from '../environments/environment.prod';
 
-//services
 import { AuthService } from  './service/auth.service';
 
-//guards
 import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
@@ -36,13 +36,15 @@ import { AuthGuard } from './guards/auth.guard';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule ,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ], 
   providers: [
     AuthService,
     AuthGuard,
     StatusBar,
     SplashScreen,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

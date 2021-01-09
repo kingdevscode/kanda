@@ -21,6 +21,10 @@ export class HomePage {
   ) {
   }
 
+  account(){
+    this.router.navigate(['/account']);
+  }
+
   register(){
     this.router.navigate(['/inscription']);
   }
