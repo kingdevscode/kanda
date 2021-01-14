@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inscription',
@@ -11,6 +12,7 @@ import { LoadingController, ToastController } from '@ionic/angular';
 })
 export class InscriptionPage implements OnInit {
 
+  user: Observable<any[]>;
   
   name:string;
   email:string;
@@ -21,12 +23,14 @@ export class InscriptionPage implements OnInit {
   toastr: any;
 
   constructor(
-    private afs:AngularFirestore,
-    private afauth:AngularFireAuth,
-    private loadingCtrl:LoadingController,
-    private toaster:ToastController,
-    private router:Router
-  ) { }
+    private afs : AngularFirestore,
+    private afauth : AngularFireAuth,
+    private loadingCtrl : LoadingController,
+    private toaster : ToastController,
+    private router : Router
+  ) {
+    this.user = this.afs.collection('users').valueChanges();
+   }
 
   ngOnInit() {
   }
@@ -45,7 +49,8 @@ export class InscriptionPage implements OnInit {
           'userId':data.user.uid,
           'name':this.name,
           'email':this.email,
-          'createdAt':Date.now()
+          'createdAt':Date.now,
+          'admin': false
         });
 
         data.user.sendEmailVerification();

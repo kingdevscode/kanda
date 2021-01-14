@@ -12,12 +12,13 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private afauth:AngularFireAuth,
-    private router:Router,
+    private afauth: AngularFireAuth,
+    private router: Router,
     private menu: MenuController
   ) {
     this.initializeApp();

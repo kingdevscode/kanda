@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { error } from 'protractor';
 import { AuthService } from '../service/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -12,13 +15,17 @@ import { AuthService } from '../service/auth.service';
 export class HomePage {
   email: string;
   password: string;
+  user: Observable<any[]>;
  
   constructor(
     private router:Router,
     private auth:AuthService,
     private toastr:ToastController,
-    private loadingCtrl:LoadingController
+    private loadingCtrl:LoadingController,
+    private afs : AngularFirestore,
+    private afauth : AngularFireAuth
   ) {
+    this.user = this.afs.collection('users').valueChanges();
   }
 
   account(){
@@ -45,12 +52,13 @@ export class HomePage {
 
       this.auth.login(this.email,this.password).then(()=>{
         loading.dismiss();
-        console.log('email: '+ this.email);
+        console.log(this.user);
         this.router.navigate(['/welcome']);
       })
 
       .catch((error)=>{
         loading.dismiss();
+        this.router.navigate(['/home']);
         this.toast(error.message, 'danger');
       });
     } else{
@@ -58,7 +66,7 @@ export class HomePage {
     }
   }
   async toast(message,status){
-    const toast=await this.toastr.create({
+    const toast = await this.toastr.create({
       message:message,
       position:'top',
       color:status,
