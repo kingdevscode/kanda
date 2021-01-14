@@ -34,5 +34,9 @@
     <ion-button [disable]="!passwordMatch" shape="round" color="warning" slot="" (click)="register()">SignUp</ion-button>
   </div>
 </ion-card>
+
+<ion-card *ngFor="let user of user | async">
+  <ion-label> {{ user.name }} </ion-label>
+</ion-card>
 </ion-content>
 

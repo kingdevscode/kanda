@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>publication</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="welcome" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button expand="full" (click)="openDetailsWithQueryParams()">
+    Open with query params
+  </ion-button>
+  
+  <ion-button expand="full" (click)="openDetailsWithService()">
+    Open with Service
+  </ion-button>
+  
+  <ion-button expand="full" (click)="openDetailsWithState()">
+    Open with State
+  </ion-button>
+</ion-content>
